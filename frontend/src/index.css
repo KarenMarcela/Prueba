@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fuente y tema (Tailwind v4: usar @theme para tokens personalizados) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+@theme {
+  --font-sans: 'Montserrat', system-ui, sans-serif;
+
+  /* Paleta del manual de identidad */
+  --color-brand-peach: #ffbd29;
+  --color-brand-greenLight: #7ed957;
+  --color-brand-greenDark: #094a24;
+  --color-brand-green: #4caf50;
+  --color-brand-white: #ffffff;
+
+  /* Aliases usados en componentes */
+  --color-primary: var(--color-brand-green);
+  --color-primary-dark: var(--color-brand-greenDark);
+  --color-primary-light: var(--color-brand-greenLight);
+  --color-secondary: var(--color-brand-peach);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
